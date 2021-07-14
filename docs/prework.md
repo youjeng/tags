@@ -1,4 +1,4 @@
-# Prework for Session One
+# Prework for Collaboration-With-Git Exercise
 
 ## Environment assumptions
 This exercise assumes you have ...
@@ -7,42 +7,42 @@ This exercise assumes you have ...
 
 ## Fork & clone the repo, and set up and run the webapp
 
-1. Fork [https://github.com/walquis/tags](https://github.com/walquis/tags){:target="_blank"}.
+1. Fork [https://github.com/walquis/tags](https://github.com/walquis/tags){:target="_blank"} (but note that when the actual project starts, you'll need to clone a fresh copy from your *team lead's* fork, not your own fork---so that you'll be able to push changes to a shared repo).
 
-2. Run these commands in a Terminal session (for best results, I recommend starting Terminal.app separately, rather than running a terminal session within your IDE).  You should be able to copy/paste pretty much verbatim, except that you need to replace \<yourlogin\> with your own login.
+2. Run these commands in a Terminal session (for best results, I recommend starting Terminal.app separately, rather than running a terminal session within your IDE).  You should be able to copy/paste these shell commands pretty much verbatim, except that you need to replace \<yourlogin\> with your own login.
 ```console
-$ cd                          # Start from your home directory
-$ mkdir -p src
-$ cd src                      # Or cd to wherever you keep code projects
-$ git clone https://github.com/<yourlogin>/tags    # Clone your fork
+cd                          # Start from your home directory
+mkdir -p src
+cd src                      # Or cd to wherever you keep code projects
+git clone https://github.com/<yourlogin>/tags    # Clone your fork
 # (Note that when the actual project exercise starts, you'll to re-clone from your team lead's fork).
-$ cd tags
-$ python3 -m venv venv        # Use the "venv" module to create a virtual env in the "venv" directory
-$ source venv/bin/activate         # Enter your python3 virtual env
-$ pip install -r requirements.txt  # Populate current virtual env with packages
-$ python manage.py migrate         # Keep Django from complaining about unapplied migrations
-$ python manage.py runserver
+cd tags
+python3 -m venv venv        # Use the "venv" module to create a virtual env in the "venv" directory
+source venv/bin/activate         # Enter your python3 virtual env
+pip install -r requirements.txt  # Populate current virtual env with packages
+python manage.py migrate         # Keep Django from complaining about unapplied migrations
+python manage.py runserver 8000  # Change 8000 if you need another port (but must be larger than 1023)
 ```
 3. Now visit [http://localhost:8000](http://localhost:8000){:target="_blank"} in your browser.
 
 To stop the app: At your shell prompt, hold down the Ctrl key and press 'c'.
 
-(To exit your virtualenv, type 'deactivate' in the shell. This is the opposite of "source venv/bin/active" that we ran above.)
+(To exit your virtual environment, type 'deactivate'. This is the complement of "source venv/bin/activate" that we ran above.)
 
 ## Explore the code
 So what is running, exactly?  You're on the `master` branch of this repo, and the webserver you started up is an empty application.
 
 Let's work our way through the changes, starting from `master` and progressing to the tip of the `sample-solution` branch.  For viewing changes, see the discussion further down in the [README](https://github.com/walquis/tags).  SourceTree or similar is handy.
 
-NOTE: During this course, I highly recommend opening shell windows using the Terminal app on your Mac, and not using whatever shell your IDE opens.  The IDE environment adds a thick layer of complexity that is unnecessary for this purpose.
+NOTE: Again, I highly recommend opening shell windows using the Terminal app on your Mac, and not using whatever shell your IDE opens.  IDE environment-handling adds a layer of complexity that tends to thwart our purposes here.  If you know exactly how your IDE populates the shell environment, then go right ahead.
 
 ### hello-world
-Check out the `hello-world` branch, and start the app.  (I find it handy to have multiple Terminal windows--one for running the git commands, and one for running the python webserver).  If you've done the setup described above, your Terminal session would look something like this:
+Check out the `hello-world` branch, and start the app.  (I find it handy to have multiple Terminal windows--one for running the git commands, and one for running the default Django webserver, which automagically reloads when it sees changes).  If you've done the setup described above, your Terminal session would look something like this:
 ```
 $ git checkout hello-world
 Branch 'hello-world' set up to track remote branch 'hello-world' from 'origin'.
 Switched to a new branch 'hello-world'
-$ python manage.py runserver
+$ python manage.py runserver   # Defaults to 8000; add a port-number arg if needed, as shown above
 ```
 Visit [http://localhost:8000](http://localhost:8000).  You should see "Hello, World!" displayed.  Selecting changes in SourceTree as shown below, you can see and browse what had to happen to make this work.
 

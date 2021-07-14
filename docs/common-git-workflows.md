@@ -1,20 +1,4 @@
-# Student Handout - Session 2
-
-## Agenda
-1. Review Session 1 - Three Objects, Three Trees
-1. Set up for Session 2 - Fork and clone
-1. Common Git Workflows
-
-## Set up for Session 2
-
-Setup is straightforward: Just fork https://github.com/walquis/learning-git, and clone to a workspace
-```
-# After forking https://github.com/walquist/learning-git to your Github account...
-$ cd
-$ git clone https://github.com/<your-github-login-here>/learning-git.git forked-learning-git
-# ...or, if you have SSH keys set up (note the colon)...
-$ git clone git@github.com:<your-github-login-here>/learning-git.git forked-learning-git
-```
+# Student Handout - Common Git Workflows
 
 ## Common Git Workflows
 
@@ -38,14 +22,14 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.<br>
 </span>
 </blockquote>
 
-We'll re-enact this scenario in our own forked repos.  Let's start by moving our local master branch to one commit behind origin/master.  How would we do that?
+Let's re-enact this scenario in our own forked repos.  Let's start by moving our local master branch to one commit behind origin/master.  (How would we do that?)
 
-OK, now let's change a file (e.g., add a line to git-aliases.sh), and add/commit/push.
+Now change a file (e.g., add a line to git-aliases.sh), and add/commit/push.
 
 What happened? What now?
 
 A couple of options:
-1. Pull-and-merge - valid, but creates a messy graph for no good reason
+1. Pull-and-merge - valid, but creates a merge for no good reason - messy graph
 1. Reset-and-cherry-pick - makes the graph like you want it
 
 ```

@@ -13,30 +13,9 @@ Keep the app working as you deliver each change to `master`. &nbsp;&nbsp;Don't "
 ## Setting Up For Running The Webapp
 Setup is covered in the [Prework for Session One](https://walquis.github.io/tags/session-1-prework).
 
-## How To Run The Project Collaboration Exercise
-To keep focused on git (as opposed to Github), we will not be using any Github workflow operations apart from the fork operation.
-1. *Team Lead* - Fork this repo and grant read/write access to the rest of the team.
-1. *Each Member* - `git clone` your team lead's forked copy to your local machine.
-1. *Whole Team* - Take a look at the commits on `sample-solution`, and agree as a team how you'll divide each task.  (`git show` and `git diff` will come in handy here!)
-1. *Each Member* - Implement your assigned features.  Below is a workflow description you may find useful.
+## The Curriculum
+The [Curriculum Introduction](https://walquis.github.io/tags) describes the content of the course, and references the Prework, the Syllabus, the Homework, and other teaching material.
 
-## A Sample Collaborative Workflow
-Start on `master`.  Catch up with your team's changes via a `git pull`. Start a new local branch, and implement your feature (which for this exercise you would do by replicating the changes from a commit on the `sample-solution` branch).  Test your changes.
-
-Go back to `master` for merging.  Before merging, it's a good idea to do a `git pull` first, just in case changes have been delivered since you last branched from `master`. (In that case, you'll need to go back to your feature branch and  merge from `master` before delivering!)
-
-Assuming you're back on `master`, go ahead and merge your feature.  After merging to `master` but before pushing up to the shared team repo, don't forget to test the website and make sure it still works.
-
-Expressing this workflow in a list format:
-1. `git checkout master` - The branch where your team will rendezvous with changes.
-1. `git pull origin master` - Catch your local master up with latest changes from your team.
-1. `git checkout -b mytask` - Create and go to a new task branch from `master`.
-1. `git cherry-pick 38f2a98` - Replay a commit onto `mytask` (may require resolving conflicts).
-1. `git checkout master` - Go to `master` in prep for bringing your stuff in.
-1. `git pull origin master` (in case more changes have been pushed by teammates).
-1. (If there *are* more changes, go back to `mytask` and merge 'em in.  Then tell your team to hold off, it's your turn now!).
-1. `git merge mytask` - Assuming you're back on master at this point.
-1. `git push origin master` - Share your scintillating creativity with your team.
 
 ## Hints For Viewing Repo Changes With Git Diff
 Note that these diff'ing methods only compare commits, that is, changes *already committed to the repo*.  They don't address contents of your working directory or index.

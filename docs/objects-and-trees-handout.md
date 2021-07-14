@@ -4,7 +4,7 @@
   .bb table { border-collapse:collapse; }
 </style>
 
-# Student Handout - Session 1
+# Student Handout - Objects and Trees
 
 ## Agenda
 1. Intro & Setting Up Your Environment
@@ -14,7 +14,7 @@
 1. Git vs Github - Know the difference
 
 ## Intro & Setting up your environment
-Start with the forked-and-cloned repo.  See the [Prework](session-1-prework) for fork & clone instructions.
+Start with the forked-and-cloned repo.  See the [Prework](prework) for fork & clone instructions.
 
 ## Basic Unix & Shell
 Review [Basic Unix and Shell](unix-shell-concepts).
@@ -50,20 +50,18 @@ $ adog  # This should work now.
 
 The git client is a big bag of commands for implementing version control using a local content-addressable DB (aka a repository, or "repo"), as well as efficiently communicating with other, remote repos\--a Distributed Version Control System, or DVCS.  Git was written by Linus Torvalds in 2005 for version-controlling the Linux kernel.
 
-In 2008, the social coding platform https://github.com came into existence, built around the git client.
+In 2008, the social coding platform [github.com](https://github.com){:target="_blank"} came into existence, built around the git client.
 
 When working with git and github, it's useful to keep in mind which operations belong to which system.  For instance...
 
 | git | github |
 | --- | --- |
-| clone | fork |
-| commit | |
-| push | |
-| pull | pull request |
-| merge | |
 | repo | repo |
-| | org |
-| | team, collaborator, org owner |
+| clone | fork |
+| commit,<br> push,<br>merge | |
+| pull | pull request |
+| | org,<br> team,<br> collaborator,<br> org owner |
+
 ## Exploring the git repo - SHAs and objects
 
 #### The git database
