@@ -11,7 +11,7 @@ The `master` branch is a working version of an empty app.  To help keep things s
 Keep the app working as you deliver each change to `master`. &nbsp;&nbsp;Don't "break the build"!
 
 ## Setting Up For Running The Webapp
-Setup is covered in the [Prework for Session One](https://walquis.github.io/tags/session-1-prework).
+Setup is covered in the [Prework for Session One](https://walquis.github.io/tags/prework).
 
 ## The Curriculum
 The [Curriculum Introduction](https://walquis.github.io/tags) describes the content of the course, and references the Prework, the Syllabus, the Homework, and other teaching material.
